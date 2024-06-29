@@ -1,5 +1,7 @@
 import React from "react";
 import cloudinary from "cloudinary";
+
+import GalleryGrid from "./GalleryGrid";
 import UploadButton from "./UploadButton";
 
 export type SearchResult = {
@@ -24,9 +26,12 @@ export default async function GalleryPage({
 
   return (
     <section>
-      <div className="flex justify-between">
-        <h1 className="text-4xl font-bold">Gallery</h1>
-        <UploadButton />
+      <div className="flex flex-col gap-8">
+        <div className="flex justify-between">
+          <h1 className="text-4xl font-bold">Gallery</h1>
+          <UploadButton />
+        </div>
+        <GalleryGrid images={results.resources} />
       </div>
     </section>
   );

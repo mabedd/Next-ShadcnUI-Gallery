@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { SideMenu } from "@/components/SideNav";
 import { Inter } from "next/font/google";
 import cloudinary from "cloudinary";
-//import { Folder } from "./albums/page";
 import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
